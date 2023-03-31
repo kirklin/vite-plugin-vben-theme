@@ -1,4 +1,4 @@
-import { createHash } from "crypto";
+import { createHash } from "node:crypto";
 import type { ResolvedConfig } from "vite";
 import CleanCSS from "clean-css";
 import { commentRE, cssBlockRE, cssValueRE, importSafeRE, ruleRE, safeEmptyRE } from "./constants";

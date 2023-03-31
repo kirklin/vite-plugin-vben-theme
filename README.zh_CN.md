@@ -34,18 +34,18 @@ npm i @kirklin/vite-plugin-vben-theme -D
 - 在 `vite.config.ts` 中配置,该方式可以按需引入需要的功能即可
 
 ```ts
-import { defineConfig, Plugin } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import { Plugin, defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-import { viteThemePlugin, mixLighten, mixDarken, tinycolor } from '@kirklin/vite-plugin-vben-theme';
+import { mixDarken, mixLighten, tinycolor, viteThemePlugin } from "@kirklin/vite-plugin-vben-theme";
 
 export default defineConfig({
   plugins: [
     vue(),
     viteThemePlugin({
       // 匹配需要修改的颜色
-       colorVariables: [],
-    });
+      colorVariables: [],
+    }),
   ],
 });
 ```

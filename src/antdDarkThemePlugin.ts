@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import type { PluginOption } from "vite";
 import fs from "fs-extra";
 import less from "less";

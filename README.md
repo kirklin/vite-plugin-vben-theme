@@ -45,7 +45,7 @@ export default defineConfig({
     viteThemePlugin({
       // Match the color to be modified
        colorVariables: [],
-    });
+    }),
   ],
 });
 ```
