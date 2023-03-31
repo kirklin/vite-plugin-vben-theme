@@ -12,61 +12,6 @@ export function injectClientPlugin(): Plugin {
   return {
     name: "vite:inject-@kirklin/vite-plugin-vben-theme-client",
     enforce: "pre",
-    // configResolved(resolvedConfig) {
-    //   config = resolvedConfig;
-    //   isServer = resolvedConfig.command === 'serve';
-    //   needSourcemap = !!resolvedConfig.build.sourcemap;
-    // },
-    // resolveId(id) {
-    //   if (id.includes('@kirklin/vite-plugin-vben-theme')) {
-    //     console.log('resolveId', id);
-    //   }
-    // if (id === virtualModuleId) {
-    //
-    //   console.log('virtual:theme-config', virtualModuleId, resolvedVirtualModuleId)
-    //   return resolvedVirtualModuleId
-    // }
-    // },
-
-    // load(id) {
-    //   if (id === resolvedVirtualModuleId) {
-    //     console.log('load ok')
-    //     const getOutputFile = (name?: string) => {
-    //       return JSON.stringify(`${config.base}${config.build.assetsDir}/${name}`)
-    //     }
-    //
-    //     return `
-    //     export const colorPluginOptions = ${JSON.stringify(colorPluginOptions)};
-    //     export const colorPluginOutputFileName = ${getOutputFile(colorPluginCssOutputName)};
-    //     export const antdDarkPluginOutputFileName = ${getOutputFile(antdDarkCssOutputName)};
-    //     export const antdDarkPluginExtractCss = ${antdDarkExtractCss};
-    //     export const antdDarkPluginLoadLink = ${antdDarkLoadLink};
-    //     export const isProd = ${!isServer};
-    //     `
-    //   }
-    // },
-
-    // transformIndexHtml: {
-    //   enforce: 'pre',
-    //   async transform(html) {
-    //     if (html.includes(CLIENT_PUBLIC_ABSOLUTE_PATH)) {
-    //       return html;
-    //     }
-    //     return {
-    //       html,
-    //       tags: [
-    //         {
-    //           tag: 'script',
-    //           attrs: {
-    //             type: 'module',
-    //             src: CLIENT_PUBLIC_ABSOLUTE_PATH,
-    //           },
-    //           injectTo: 'head-prepend',
-    //         },
-    //       ],
-    //     };
-    //   },
-    // },
 
     async transform(code, id) {
       const nid = normalizePath(id);
