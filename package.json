@@ -1,6 +1,6 @@
 {
   "name": "@kirklin/vite-plugin-vben-theme",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "packageManager": "pnpm@8.1.0",
   "description": "Vite plugin for dynamically changing the theme color of the interface",
   "author": "Kirk Lin <linkirk@163.com> (https://github.com/kirklin)",
